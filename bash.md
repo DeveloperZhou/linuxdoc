@@ -13,6 +13,7 @@
 
 1.type ¶type [-tpa] name¶
 > 不加任何选项与参数时, type会显示出name是外部指令还是bash内建指令
+
 > -a: 会由PATH变数定义的路径中, 将所有含name的指令都列出来，包含alias
 
 
@@ -37,8 +38,6 @@ ${variable# **/*local/bin:** }
 
 ###Shortcuts
 
-|组合键|功能示范|
-|-|-|
 |ctrl+u/ctrl+k|分别是从游标处向前删除指令串及向后删除指令串|
 |ctrl+a/ctrl+e|分别是让游标移动到整个指令串的最前面或最后面|
 
