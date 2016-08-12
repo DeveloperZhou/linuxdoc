@@ -20,19 +20,18 @@
 ###Useful methods 
 
 1.变数内容的删除、取代与替换
-<hr>
+
 **${** variable#/\*local/bin: **}** 
 上面的特殊字体部分是关键字！用在这种删除模式所必须存在的
+
 ${ **variable** #/\*local/bin:}
 这就是原本的变数名称
+
 ${variable **#** /\*local/bin:}
 这是重点！代表『从变数内容的最前面开始向右删除』，且仅删除最短的那个
+
 ${variable# **/*local/bin:** }
 代表要被删除的部分，由于#代表由前面开始删除，所以这里便由开始的/写起
-
-<hr>
-
-
 
 
 
@@ -40,7 +39,6 @@ ${variable# **/*local/bin:** }
 
 |ctrl+u/ctrl+k|分别是从游标处向前删除指令串及向后删除指令串|
 |ctrl+a/ctrl+e|分别是让游标移动到整个指令串的最前面或最后面|
-
 
 
 ###Attention points
