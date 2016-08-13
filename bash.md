@@ -1,6 +1,28 @@
 [TOC] 
  
- 
+###Basic knowledge
+
+1.文件描述符(File Descriptor)  
+0 stdin	| 1 stdout | 2 stderr	
+'<' <==> '0<' ; '>' <==> '1>'  
+
+tee: 不影响原本 I/O ，将 stdout 复制一份到档案去  
+cmd << text: 从命令行读取输入，直到一个与text相同的行结束  
+cmd <<< word: 把word(而不是文件word)和后面的换行作为输入提供给cmd   
+cmd <> file: 以读写模式把文件file重定向到输入，文件file不会被破坏。仅当应用程序利用了这一特性时，它才有意义  
+  
+> cmd >&n		把输出送到文件描述符n  
+> cmd m>&n		把输出到文件符m的信息重定向到文件描述符n  
+> cmd >&-		关闭标准输出  
+> cmd <&n		输入来自文件描述符n  
+> cmd m<&n		m来自文件描述符n  
+> cmd <&-		关闭标准输入  
+    
+> cmd 2>file		把文件描述符2重定向到file，即把错误输出存到file中  
+> cmd > file 2>&1	把标准错误重定向到标准输出，再重定向到file   
+> cmd &> file		功能与上一个相同(或 cmd >& file)
+
+
 ###Configuration file location and function 
  
  
